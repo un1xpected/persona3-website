@@ -1,9 +1,5 @@
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import menuVideo from './assets/Mainn.mp4'
-import main1 from './assets/main1.mp4'
-import main2 from './assets/main2.mp4'
-import main3 from './assets/main3.mp4'
 import P3Menu from './P3Menu'
 import VideoPage from './VideoPage'
 import ResumePage from './ResumePage'
@@ -11,6 +7,11 @@ import PageTransition from './PageTransition'
 import Socials from './Socials'
 import AboutMe from './AboutMe'
 import './App.css'
+
+const menuVideo = "https://res.cloudinary.com/dec3kly9b/video/upload/q_auto/f_auto/v1775852101/Mainn_small_e3vyod.mp4"
+const main1 = "https://res.cloudinary.com/dec3kly9b/video/upload/q_auto/f_auto/v1775851533/main2_wn48ya.mp4"
+const main2 = "https://res.cloudinary.com/dec3kly9b/video/upload/q_auto/f_auto/v1775851533/main2_wn48ya.mp4"
+const main3 = "https://res.cloudinary.com/dec3kly9b/video/upload/q_auto/f_auto/v1775851516/main3_dchkuc.mp4"
 
 function MenuScreen() {
   const navigate = useNavigate()

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import char1 from "./assets/char1.png";
 import char2 from "./assets/char2.png";
 import char3 from "./assets/char3.png";
-import bgVideo from "./assets/main1.mp4";
+const bgVideo = "https://res.cloudinary.com/dec3kly9b/video/upload/q_auto/f_auto/v1775851533/main2_wn48ya.mp4";
 import icon1 from "./assets/icon1.png";
 import icon2 from "./assets/icon2.png";
 import icon3 from "./assets/icon3.png";
@@ -21,19 +21,19 @@ const REVEAL_CONTENT = [
   },
   {
     upper: [
-      "Linux kernelinin ilk versiyonu 1991'de Linus Torvalds tarafından yazıldı — o da 21 yaşındaydı.",
-      "Dünyanın ilk programcısı Ada Lovelace, 1843'te bir bilgisayar algoritması yazdı — bilgisayar henüz yoktu.",
-      "Bash shell'i 1989'da Brian Fox yazdı ve hâlâ dünyanın en çok kullanılan shell'i.",
+      "The first Linux kernel was written by Linus Torvalds in 1991 — he was only 21 years old.",
+      "Ada Lovelace wrote the first computer algorithm in 1843 — before computers even existed.",
+      "Bash shell was written in 1989 by Brian Fox and is still the most used shell in the world.",
     ],
-    lower: "yukarıdaki bilgiler tech dünyasından fun facts",
+    lower: "fun facts from the tech world",
   },
   {
     upper: [
-      "Kendi programlama dilini yazmaya çalışıyorum — adı CHRONOS.",
-      "Rust ile yazılmış, her şey explicit — hiçbir şey implicit değil.",
-      "15 yaşında kernel yazılımcılığı ile uğraşıyorum.",
+      "I am building my own programming language called CHRONOS.",
+      "Written in Rust — everything is explicit, nothing is implicit.",
+      "Designing a language at 15 while most people my age just play games.",
     ],
-    lower: "wired fact: çoğu insan benim yaşımda oyun oynarken ben dil tasarlıyorum",
+    lower: "wired fact: i architect programming languages for fun",
   },
 ];
 
