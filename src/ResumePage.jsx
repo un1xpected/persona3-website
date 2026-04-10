@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ITEMS = [
-  { id: "i", badge: "I", title: "EDUCATION", subtitle: "University / Coursework", rank: 3 },
-  { id: "ii", badge: "II", title: "SKILLS", subtitle: "Frontend / Design / UI", rank: 4 },
+  { id: "i", badge: "I", title: "EDUCATION", subtitle: "High School / Self-Taught", rank: 4 },
+  { id: "ii", badge: "II", title: "SKILLS", subtitle: "Shell / Kernel / Systems", rank: 5 },
   { id: "iii", badge: "III", title: "PROJECTS", subtitle: "Featured Work", rank: 5 },
-  { id: "iv", badge: "IV", title: "EXPERIENCE", subtitle: "Internships / Roles", rank: 2 },
+  { id: "iv", badge: "IV", title: "EXPERIENCE", subtitle: "Open Source / Dev", rank: 3 },
 ];
 
 const EDUCATION_ROWS = [
-  { index: "01", title: "General Education", status: "Complete" },
-  { index: "02", title: "Computer Science Core", status: "In Progress" },
-  { index: "03", title: "Elective Track", status: "Queued" },
-  { index: "04", title: "Capstone Prep", status: "Pending" },
+  { index: "01", title: "High School", status: "In Progress" },
+  { index: "02", title: "Self-Taught Linux & Kernel", status: "Active" },
+  { index: "03", title: "Rust Programming", status: "Active" },
+  { index: "04", title: "Computer Science Core", status: "Ongoing" },
 ];
 
 export default function ResumePage({ src }) {
@@ -409,7 +409,7 @@ export default function ResumePage({ src }) {
             <div className="resume-detail-top">
               <div className="resume-detail-top-index">01</div>
               <div className="resume-detail-top-title">EDUCATION LOG</div>
-              <div className="resume-detail-top-progress">7/5</div>
+              <div className="resume-detail-top-progress">4/4</div>
             </div>
 
             <div className="resume-detail-list">
@@ -425,9 +425,103 @@ export default function ResumePage({ src }) {
             <div className="resume-detail-bottom">
               <div className="resume-detail-bottom-title">DETAILS</div>
               <div className="resume-detail-bullets">
-                <div className="resume-detail-bullet">- Maintain progress across required classes and supporting work.</div>
-                <div className="resume-detail-bullet">- Track portfolio-ready projects tied to coursework and labs.</div>
-                <div className="resume-detail-bullet">- Keep materials prepared for internships, research, and review.</div>
+                <div className="resume-detail-bullet">- High school student, passionate about CS.</div>
+                <div className="resume-detail-bullet">- Self-taught Linux kernel and shell scripting.</div>
+                <div className="resume-detail-bullet">- Building my own programming language in Rust.</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {active === 1 && (
+          <div className="resume-detail-panel">
+            <div className="resume-detail-top">
+              <div className="resume-detail-top-index">02</div>
+              <div className="resume-detail-top-title">SKILLS</div>
+              <div className="resume-detail-top-progress">SYS</div>
+            </div>
+            <div className="resume-detail-list">
+              {[
+                { index: "01", title: "Shell Scripting (Bash/Zsh)", status: "Advanced" },
+                { index: "02", title: "Linux Kernel Dev", status: "Learning" },
+                { index: "03", title: "Rust", status: "Active" },
+                { index: "04", title: "C / Systems Programming", status: "Active" },
+                { index: "05", title: "Git & Open Source", status: "Active" },
+              ].map((row) => (
+                <div className="resume-detail-row" key={row.index}>
+                  <div className="resume-detail-row-index">{row.index}</div>
+                  <div className="resume-detail-row-title">{row.title}</div>
+                  <div className="resume-detail-status">{row.status}</div>
+                </div>
+              ))}
+            </div>
+            <div className="resume-detail-bottom">
+              <div className="resume-detail-bottom-title">DETAILS</div>
+              <div className="resume-detail-bullets">
+                <div className="resume-detail-bullet">- Shell scripting for system automation.</div>
+                <div className="resume-detail-bullet">- Kernel modules and low-level programming.</div>
+                <div className="resume-detail-bullet">- Type-safe systems programming with Rust.</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {active === 2 && (
+          <div className="resume-detail-panel">
+            <div className="resume-detail-top">
+              <div className="resume-detail-top-index">03</div>
+              <div className="resume-detail-top-title">PROJECTS</div>
+              <div className="resume-detail-top-progress">WIP</div>
+            </div>
+            <div className="resume-detail-list">
+              {[
+                { index: "01", title: "CHRONOS Lang", status: "Alpha" },
+                { index: "02", title: "github.com/un1xpected/chronos", status: "Rust" },
+              ].map((row) => (
+                <div className="resume-detail-row" key={row.index}>
+                  <div className="resume-detail-row-index">{row.index}</div>
+                  <div className="resume-detail-row-title">{row.title}</div>
+                  <div className="resume-detail-status">{row.status}</div>
+                </div>
+              ))}
+            </div>
+            <div className="resume-detail-bottom">
+              <div className="resume-detail-bottom-title">CHRONOS</div>
+              <div className="resume-detail-bullets">
+                <div className="resume-detail-bullet">- Building my own programming language in Rust.</div>
+                <div className="resume-detail-bullet">- Everything explicit — nothing is implicit.</div>
+                <div className="resume-detail-bullet">- Motto: Explicit. Ceremonial. Absolute.</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {active === 3 && (
+          <div className="resume-detail-panel">
+            <div className="resume-detail-top">
+              <div className="resume-detail-top-index">04</div>
+              <div className="resume-detail-top-title">EXPERIENCE</div>
+              <div className="resume-detail-top-progress">DEV</div>
+            </div>
+            <div className="resume-detail-list">
+              {[
+                { index: "01", title: "Open Source Contributor", status: "Active" },
+                { index: "02", title: "Self-Directed Projects", status: "Ongoing" },
+                { index: "03", title: "Linux Power User", status: "Daily" },
+              ].map((row) => (
+                <div className="resume-detail-row" key={row.index}>
+                  <div className="resume-detail-row-index">{row.index}</div>
+                  <div className="resume-detail-row-title">{row.title}</div>
+                  <div className="resume-detail-status">{row.status}</div>
+                </div>
+              ))}
+            </div>
+            <div className="resume-detail-bottom">
+              <div className="resume-detail-bottom-title">DETAILS</div>
+              <div className="resume-detail-bullets">
+                <div className="resume-detail-bullet">- Active development on GitHub.</div>
+                <div className="resume-detail-bullet">- Full ownership of personal projects.</div>
+                <div className="resume-detail-bullet">- Constant learning and building cycle.</div>
               </div>
             </div>
           </div>
