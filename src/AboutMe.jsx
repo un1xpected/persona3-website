@@ -31,7 +31,7 @@ const REVEAL_CONTENT = [
     upper: [
       "I am building my own programming language called CHRONOS.",
       "Written in Rust — everything is explicit, nothing is implicit.",
-      "Designing a language at 15 while most people my age just play games.",
+
     ],
     lower: "wired fact: i architect programming languages for fun",
   },
